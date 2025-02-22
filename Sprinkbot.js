@@ -6,8 +6,8 @@ const {token} = require('./config.json');
 const client = new Client({intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]});
 
 //When client is ready, run once
-client.once(Events.ClientReady, _readyClient => {
-    console.log('Ready! Logged in as ${readyClient.user.tag}');
+client.once(Events.ClientReady, readyClient => {
+    console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
 //Making command handler
